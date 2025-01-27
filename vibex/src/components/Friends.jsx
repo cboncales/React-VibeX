@@ -20,7 +20,7 @@ const Friends = () => {
 
   return (
     <div className="sticky hidden xl:flex items-start justify-start flex-1">
-      <div className="sticky top-10 flex flex-col w-full gap-5 rounded-3xl border-gray-300 p-5 text-center md:w-5/6">
+      <div className="sticky top-10 flex flex-col w-full gap-5 rounded-3xl border border-white p-5 text-center md:w-5/6">
         <h3 className="text-4xl font-semibold">Friends</h3>
         <ul className="flex w-full flex-col gap-5">
           {friendsList.map((friend, index) => (
@@ -30,11 +30,11 @@ const Friends = () => {
             >
               <div className="flex items-center gap-5">
                 <img
-                  src={Friends.img}
-                  className="w-14 rounded-full md:w-16"
+                  src={friend.img}
+                  className="w-14 h-15 rounded-full md:w-16"
                   alt="friend pic"
                 />
-                <span className="text-lg font-semibold">{Friends.name}</span>
+                <span className="text-lg font-semibold">{friend.name}</span>
               </div>
               <button className="rounded-3xl bg-blue-500 p-2 text-white transition-all duration-300 hover:bg-blue-400">
                 Message
