@@ -3,8 +3,16 @@ import React from "react";
 const Navigation = ({ toggleDarkMode, darkMode }) => {
   return (
     <div className="sticky hidden xl:flex items-start justify-end flex-1">
-      <ul className="sticky top-10 flex w-4/6 flex-col gap-3 rounded-3xl border border-gray-300 bg-white p-5">
-        <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+      <ul
+        className={`sticky top-10 flex w-4/6 flex-col gap-3 rounded-3xl border p-5 ${
+          darkMode
+            ? "border-gray-700 bg-black text-white"
+            : "border-gray-300 bg-white text-black"
+        }`}
+      >
+        <li
+          className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+        >
           <a
             href="#"
             className="flex items-center justify-start gap-2 text-xl hover:text-blue-500"
@@ -26,7 +34,9 @@ const Navigation = ({ toggleDarkMode, darkMode }) => {
             Home
           </a>
         </li>
-        <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+        <li
+          className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+        >
           <a
             href="#"
             className="flex items-center justify-start gap-2 text-xl hover:text-blue-500"
@@ -48,7 +58,9 @@ const Navigation = ({ toggleDarkMode, darkMode }) => {
             Explore
           </a>
         </li>
-        <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+        <li
+          className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+        >
           <a
             href="#"
             className="flex items-center justify-start gap-2 text-xl hover:text-blue-500"
@@ -70,7 +82,9 @@ const Navigation = ({ toggleDarkMode, darkMode }) => {
             Your Profile
           </a>
         </li>
-        <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+        <li
+          className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+        >
           <a
             href="#"
             className="flex items-center justify-start gap-2 text-xl hover:text-blue-500"
@@ -92,7 +106,9 @@ const Navigation = ({ toggleDarkMode, darkMode }) => {
             Groups
           </a>
         </li>
-        <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+        <li
+          className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+        >
           <a
             href="#"
             className="flex items-center justify-start gap-2 text-xl hover:text-blue-500"
@@ -114,7 +130,9 @@ const Navigation = ({ toggleDarkMode, darkMode }) => {
             Notifications
           </a>
         </li>
-        <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+        <li
+          className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+        >
           <a
             href="#"
             className="flex items-center justify-start gap-2 text-xl hover:text-blue-500"
@@ -136,7 +154,9 @@ const Navigation = ({ toggleDarkMode, darkMode }) => {
             Saved
           </a>
         </li>
-        <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+        <li
+          className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+        >
           <a
             href="#"
             className="flex items-center justify-start gap-2 text-xl hover:text-blue-500"
@@ -163,7 +183,9 @@ const Navigation = ({ toggleDarkMode, darkMode }) => {
             Settings
           </a>
         </li>
-        <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+        <li
+          className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+        >
           <button
             className="flex items-center justify-start gap-2 text-xl hover:text-blue-500"
             onClick={toggleDarkMode}
@@ -202,7 +224,9 @@ const Navigation = ({ toggleDarkMode, darkMode }) => {
             {darkMode ? "Light Mode" : "Dark Mode"}
           </button>
         </li>
-        <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+        <li
+          className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+        >
           <a
             href="#"
             className="flex items-center justify-start gap-2 text-xl hover:text-blue-500"
