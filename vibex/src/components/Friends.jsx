@@ -20,7 +20,7 @@ const Friends = () => {
 
   return (
     <div className="sticky hidden xl:flex items-start justify-start flex-1">
-      <div className="sticky top-10 flex flex-col w-full gap-5 rounded-3xl border border-white p-5 text-center md:w-5/6">
+      <div className="sticky top-10 flex flex-col w-full gap-5 rounded-3xl border border-gray-300 bg-white p-5 text-center md:w-5/6">
         <h3 className="text-4xl font-semibold">Friends</h3>
         <ul className="flex w-full flex-col gap-5">
           {friendsList.map((friend, index) => (
