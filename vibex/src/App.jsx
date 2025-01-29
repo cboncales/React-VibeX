@@ -1,6 +1,7 @@
 import Friends from "./components/Friends";
 import Feed from "./components/Feed";
 import Navigation from "./components/Navigation";
+import BottomNav from "./components/BottomNav";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <Navigation />
           <Feed />
           <Friends />
+          <BottomNav />
         </main>
       </div>
     </>
