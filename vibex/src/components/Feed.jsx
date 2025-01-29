@@ -21,14 +21,14 @@ const Feed = () => {
   return (
     <div className="flex flex-[2] flex-col items-center justify-center gap-3 px-3">
       <SharePost />
-      <Posts />
-      <Posts />
-      <Posts />
-      <Posts />
-      <Posts />
-      <Posts />
-      <Posts />
-      <Posts />
+      <Posts image={image6} friend={friend1} name="Jhon Leovil" />
+      <Posts image={image2} friend={friend5} name="Steven" />
+      <Posts image={image1} friend={friend6} name="Emmanuel" />
+      <Posts image={image8} friend={friend2} name="Roy" />
+      <Posts image={image3} friend={friend3} name="Stanley" />
+      <Posts image={image5} friend={friend7} name="Ken" />
+      <Posts image={image4} friend={friend4} name="Greg" />
+      <Posts image={image7} friend={friend3} name="Stanley" />
     </div>
   );
 };
