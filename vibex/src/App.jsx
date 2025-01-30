@@ -19,7 +19,7 @@ function App() {
         <main className="flex min-h-screen w-full">
           <Navigation toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
           <Feed darkMode={darkMode} />
-          <Friends />
+          <Friends darkMode={darkMode} />
           <BottomNav toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
         </main>
       </div>
