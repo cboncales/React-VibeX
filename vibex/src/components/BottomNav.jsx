@@ -2,8 +2,12 @@ import React from "react";
 
 const BottomNav = ({ toggleDarkMode, darkMode }) => {
   return (
-    <ul className="fixed bottom-0 flex w-full list-none justify-around border-t bg-white/60 p-3 shadow-lg backdrop-blur-md xl:hidden">
-      <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+    <ul
+      className={`fixed bottom-0 flex w-full list-none justify-around border-t  p-3 shadow-lg backdrop-blur-md xl:hidden ${darkMode ? "border-gray-700 border-t-gray-700 bg-black/60 text-white" : "bg-white/60"}`}
+    >
+      <li
+        className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+      >
         <a
           href="#"
           className="flex items-center justify-start gap-2 text-base hover:text-blue-500"
@@ -25,7 +29,9 @@ const BottomNav = ({ toggleDarkMode, darkMode }) => {
           Home
         </a>
       </li>
-      <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+      <li
+        className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+      >
         <a
           href="#"
           className="flex items-center justify-start gap-2 text-base hover:text-blue-500"
@@ -47,7 +53,9 @@ const BottomNav = ({ toggleDarkMode, darkMode }) => {
           Explore
         </a>
       </li>
-      <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+      <li
+        className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+      >
         <a
           href="#"
           className="flex items-center justify-start gap-2 text-base hover:text-blue-500"
@@ -69,7 +77,9 @@ const BottomNav = ({ toggleDarkMode, darkMode }) => {
           Messages
         </a>
       </li>
-      <li className="rounded-full p-3 transition-colors duration-200 hover:bg-gray-100">
+      <li
+        className={`rounded-full p-3 transition-colors duration-200  ${darkMode ? "hover:bg-gray-900" : "hover:bg-gray-100"}`}
+      >
         <button
           className="flex items-center justify-start gap-2 text-base hover:text-blue-500"
           onClick={toggleDarkMode}
