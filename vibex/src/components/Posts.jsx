@@ -1,19 +1,25 @@
 import React from "react";
 
-const Posts = (props) => {
+const Posts = ({ darkMode, friend, name, image }) => {
   return (
-    <div className="flex-1 rounded-3xl border border-gray-700 bg-white ">
+    <div
+      className={`flex-1 rounded-3xl border ${
+        darkMode
+          ? "border-gray-700 bg-black text-white"
+          : "border-gray-300 bg-white"
+      }`}
+    >
       <div className="flex flex-col gap-3 p-5">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <img
-              src={props.friend}
+              src={friend}
               alt=""
               className="w-14 h-15 cursor-pointer rounded-full border-2 outline-none ring-transparent transition-all duration-200 hover:ring-2 hover:ring-blue-500"
             />
-            <div className="flex flex-col ">
+            <div className="flex flex-col">
               <h3>
-                <span className="font-bold">{props.name}</span> shared a photo.
+                <span className="font-bold">{name}</span> shared a photo.
               </h3>
               <span className="text-gray-500">2 hours ago.</span>
             </div>
@@ -24,7 +30,9 @@ const Posts = (props) => {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-6"
+            className={`w-8 cursor-pointer rounded-full p-1 ${
+              darkMode ? "hover:bg-gray-800" : "hover:bg-gray-200"
+            }`}
           >
             <path
               strokeLinecap="round"
@@ -39,8 +47,12 @@ const Posts = (props) => {
           Repellendus et unde amet provident cupiditate vitae, eveniet officiis
           dignissimos maiores cum atque.
         </p>
-        <img src={props.image} alt="" className="rounded-3xl" />
-        <div className="flex items-center justify-center gap-3 rounded-2xl bg-gray-100 p-2">
+        <img src={image} alt="" className="rounded-3xl" />
+        <div
+          className={`flex items-center justify-center gap-3 rounded-2xl p-2 ${
+            darkMode ? "bg-gray-900" : "bg-gray-100"
+          }`}
+        >
           <div className="flex items-center gap-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
