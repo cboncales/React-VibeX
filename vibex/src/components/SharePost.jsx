@@ -1,9 +1,11 @@
 import React from "react";
 import pp from "/friend-images/friend1.jpg";
 
-const SharePost = () => {
+const SharePost = ({ darkMode }) => {
   return (
-    <div className="sticky top-0 flex w-full flex-col gap-5 rounded-bl-3xl rounded-br-3xl bg-white/60 backdrop-blur-md p-5 border-b border-l border-r border-gray-300">
+    <div
+      className={`sticky top-0 flex w-full flex-col gap-5 rounded-bl-3xl rounded-br-3xl backdrop-blur-md p-5 border-b border-l border-r  ${darkMode ? "border-gray-700 bg-black/60 text-white" : "bg-white/60 text-black border-gray-300"}`}
+    >
       <div className="flex gap-5">
         <img
           src={pp}
@@ -12,7 +14,7 @@ const SharePost = () => {
         />
         <textarea
           placeholder="What's on your mind?"
-          className="w-full resize-none rounded-2xl border border-gray-200 p-3 shadow-md outline-none ring-transparent transition-all duration-200 hover:bg-gray-50 focus:-translate-y-1 focus:bg-gray-100 focus:shadow-xl focus:ring-2 focus:ring-blue-500"
+          className={`w-full resize-none rounded-2xl border  p-3 shadow-md outline-none ring-transparent transition-all duration-200  focus:-translate-y-1  focus:shadow-xl focus:ring-2 focus:ring-blue-500 ${darkMode ? "border-gray-700 bg-black/60 focus:bg-gray-900 text-white" : "border-gray-200 bg-white/60 text-black focus:bg-gray-100 hover:bg-gray-50"}`}
         ></textarea>
       </div>
       <div className="flex flex-wrap items-center justify-between">

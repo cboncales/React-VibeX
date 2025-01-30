@@ -17,10 +17,10 @@ import friend5 from "/friend-images/friend5.jpg";
 import friend6 from "/friend-images/friend6.jpg";
 import friend7 from "/friend-images/friend7.jpg";
 
-const Feed = () => {
+const Feed = ({ darkMode }) => {
   return (
     <div className="flex flex-[2] flex-col items-center justify-center gap-3 px-3">
-      <SharePost />
+      <SharePost darkMode={darkMode} />
       <Posts image={image6} friend={friend1} name="Jhon Leovil" />
       <Posts image={image2} friend={friend5} name="Steven" />
       <Posts image={image1} friend={friend6} name="Emmanuel" />
